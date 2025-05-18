@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#002533"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/insertMovieButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:background="@drawable/shape"
+        android:padding="15sp"
+        android:text="@string/insertBut"
+        android:textSize="20sp"
+        app:backgroundTint="#00384d"
+        app:icon="@drawable/edit"
+        app:iconGravity="top"
+        app:iconSize="50sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkMovieButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:background="@drawable/shape"
+        android:padding="15sp"
+        android:text="@string/queryBut"
+        android:textSize="20sp"
+        app:backgroundTint="#00384d"
+        app:icon="@drawable/find"
+        app:iconGravity="top"
+        app:iconSize="50sp" />
+
+</LinearLayout>

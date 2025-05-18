@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="local.julio.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/showInsertFragment"
+            app:destination="@id/insertMovieFragment" />
+        <action
+            android:id="@+id/showQueryFragment"
+            app:destination="@id/queryMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertMovieFragment"
+        android:name="local.julio.ui.InsertMovieFragment"
+        android:label="Insertar"
+        tools:layout="@layout/fragment_insert_movie" />
+    <fragment
+        android:id="@+id/queryMoviesFragment"
+        android:name="local.julio.ui.QueryMoviesFragment"
+        android:label="Buscar"
+        tools:layout="@layout/fragment_query_movies" >
+        <action
+            android:id="@+id/showMovieList"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="local.julio.ui.MovieDetailFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
